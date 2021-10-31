@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@color/light_grey">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:padding="20dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_baseline_person"
+            app:tint="@color/silver" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_baseline_search"
+            app:tint="@color/silver"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_baseline_notifications"
+            app:tint="@color/silver"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="35dp"
+        android:gravity="center_vertical"
+        android:background="@color/white">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/image" />
+
+        </androidx.cardview.widget.CardView>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="wrap_content"
+            android:hint="How are you feel today?"
+            android:textSize="14sp"
+            android:layout_marginStart="10dp"
+            android:textColorHint="@color/silver"
+            android:background="@color/white"
+            />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_baseline_emoji_emotions_24" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvItems"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/item_layout" />
+
+</LinearLayout>
